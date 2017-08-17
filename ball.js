@@ -45,6 +45,6 @@ Ball.prototype.update = function() {
         this.xVelocity *= -1.1
         this.yVelocity *= -1.1
 
-        this.yVelocity += hitter.yVelocity / 2
+        this.yVelocity += hitter.yVelocity / 4
     }
 }
