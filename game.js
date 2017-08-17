@@ -55,10 +55,11 @@ Game.prototype.update = function() {
 }
 
 Game.prototype.draw =  function() {
-    var self = this;
+    var self = this
 
     this.entities.forEach(function(entity) {
-        if(entity.draw)
+        if(entity.draw) {
             entity.draw(self.context)
+        }
     })
 }

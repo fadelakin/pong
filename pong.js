@@ -12,7 +12,8 @@ var canvas = $("canvas")[0]
 var game = new Game(canvas)
 
 game.entities = [
-    new Background()
+    new Background(),
+    new Ball()
 ]
 
 game.start()

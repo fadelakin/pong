@@ -26,7 +26,7 @@ Entity.prototype.update = function() {
 
 // the entity knows how to draw itself
 // all entities of our game will be white rectangles
-Entity.prototype.draw = function() {
+Entity.prototype.draw = function(context) {
     context.fillStyle = "#fff"
     context.fillRect(this.x, this.y, this.width, this.height)
 }
