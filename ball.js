@@ -17,7 +17,7 @@ Ball.prototype.constructor = Ball
 Ball.prototype.update = function() {
     Entity.prototype.update.apply(this, arguments) // super
 
-    if(this.y > game.height - this.height) {
+    if(this.y > game.height - this.height || this.y < 0) {
         this.yVelocity *= -1
     }
 }
