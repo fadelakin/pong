@@ -14,9 +14,10 @@ Ball.prototype.reset = function() {
     this.x = game.width / 2 - this.width // center horizontally
     this.y = game.height / 2 - this.height // center vertically
 
-    // make ball move
-    this.yVelocity = 10
-    this.xVelocity = 5
+    // make ball move randomly
+    var min = -5, max = 5
+    this.yVelocity = Math.floor(Math.random() * (max - min + 1) + min)
+    this.xVelocity = Math.random() > 0.5 ? 5 : -5
 }
 
 Ball.prototype.update = function() {
@@ -27,6 +28,10 @@ Ball.prototype.update = function() {
     }
 
     if(this.x > game.width) {
+        this.reset()
+    }
+
+    if(this.x < 0) {
         this.reset()
     }
 }
