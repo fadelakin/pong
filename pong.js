@@ -14,7 +14,8 @@ var game = new Game(canvas)
 game.entities = [
     new Background(),
     new Ball(),
-    new Player()
+    new Player(),
+    new Bot()
 ]
 
 game.start()
