@@ -45,3 +45,20 @@ Game.prototype.start = function() {
         self.draw()
     }, interval)
 }
+
+Game.prototype.update = function() {
+    this.entities.forEach(function(entity) {
+        if(entity.update) {
+            entity.update()
+        }
+    })
+}
+
+Game.prototype.draw =  function() {
+    var self = this;
+
+    this.entities.forEach(function(entity) {
+        if(entity.draw)
+            entity.draw(self.context)
+    })
+}
