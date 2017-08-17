@@ -13,7 +13,8 @@ var game = new Game(canvas)
 
 game.entities = [
     new Background(),
-    new Ball()
+    new Ball(),
+    new Paddle()
 ]
 
 game.start()
