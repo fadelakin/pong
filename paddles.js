@@ -6,6 +6,8 @@ function Paddle() {
     this.width = 20
     this.height = 100
 
+    this.score = 0
+
 }
 
 Paddle.prototype = Object.create(Entity.prototype)
