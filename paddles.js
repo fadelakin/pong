@@ -23,4 +23,7 @@ Paddle.prototype.update = function() {
     } else {
         this.yVelocity = 0
     }
+
+    // paddle doesn't go off screen
+    this.y = Math.min(Math.max(this.y, 0), game.height - this.height)
 }
